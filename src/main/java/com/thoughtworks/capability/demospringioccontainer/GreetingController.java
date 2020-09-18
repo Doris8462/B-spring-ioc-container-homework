@@ -10,14 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 //@Scope(value = "prototype")
 public class GreetingController {
 
-    private final GreetingService greetingService;
-
-    @Autowired
-    public GreetingController(GreetingService greetingService) {
-        System.out.println("+++++++GreetingController is instantiating...");
-
-        this.greetingService = greetingService;
-    }
+    private  GreetingService greetingService;
 
     @Lookup
     public GreetingService getGreetingService() {
